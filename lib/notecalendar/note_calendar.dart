@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mono_read/template/calendarCard.dart';
 
 import 'package:mono_read/template/floatAppBar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:mono_read/template/noteCard.dart';
 
 class NoteCalendar extends StatefulWidget {
   const NoteCalendar({Key? key}) : super(key: key);
@@ -72,17 +74,25 @@ class _NoteCalendarState extends State<NoteCalendar> {
                         //All Notes
                         child: Container(
                           width: double.infinity,
+                          alignment: Alignment.topCenter,
                           decoration: BoxDecoration(
                             color: const Color(0xFFF4F1DE),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Stack(
-                            children: [
-                              GridView.count(
-                                crossAxisCount: 2,
-                                children: [],
-                              ),
-                            ],
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: GridView.count(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 17,
+                              crossAxisSpacing: 17,
+                              childAspectRatio: 0.71,
+                              children: [
+                                NotesCard(),
+                                NotesCard(),
+                                NotesCard(),
+                                NotesCard(),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -94,6 +104,37 @@ class _NoteCalendarState extends State<NoteCalendar> {
                             color: const Color(0xFFF4F1DE),
                             borderRadius: BorderRadius.circular(20),
                           ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 17),
+                            child: Stack(
+                              alignment: Alignment.topCenter,
+                              children: [
+                                const Text(
+                                  "Maret 2022",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 21),
+                                  child: GridView.count(
+                                    crossAxisCount: 2,
+                                    mainAxisSpacing: 29,
+                                    crossAxisSpacing: 29,
+                                    childAspectRatio: 0.91,
+                                    children: [
+                                      CalendarCard(),
+                                      CalendarCard(),
+                                      CalendarCard(),
+                                      CalendarCard(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -103,8 +144,15 @@ class _NoteCalendarState extends State<NoteCalendar> {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Color(0xFF3D405B),
+          child: const Icon(
+            Icons.add_rounded,
+            size: 30,
+          ),
+        ),
       ),
     );
-
   }
 }
