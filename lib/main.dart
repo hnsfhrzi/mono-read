@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:mono_read/homepage/homePage.dart';
 import 'package:mono_read/notecalendar/add_note.dart';
+import 'package:mono_read/notecalendar/edit_note.dart';
 import 'package:mono_read/startingscreen/onboarding.dart';
 import 'package:mono_read/startingscreen/splash_screen.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AddNote(),
+      home: EditNote(),
     );
   }
 }
