@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mono_read/template/buttons.dart';
 import 'package:mono_read/template/floatAppBar.dart';
 
 class Settings extends StatelessWidget {

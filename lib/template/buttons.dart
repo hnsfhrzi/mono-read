@@ -6,17 +6,21 @@ class SquareButton extends StatelessWidget {
   const SquareButton({
     Key? key,
     required this.text,
-    required this.icon_1,
+    required this.icon,
+    this.iconColor = 0XFFFFFFFF,
     required this.bgColor,
+    required this.destination,
   }) : super(key: key);
 
   final String text;
   final int bgColor;
-  final Widget icon_1;
+  final int iconColor;
+  final IconData icon;
+  final Widget destination;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 105,
       width: 90,
       child:
@@ -25,13 +29,23 @@ class SquareButton extends StatelessWidget {
           height: 70,
           width: 70,
           child: ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: const Color(0XFF3D405B)),
-            child: const Icon(Icons.event_note_outlined, size: 38),
-            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+                primary: Color(bgColor),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
+            child: Icon(
+              icon,
+              size: 38,
+              color: Color(iconColor),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => destination));
+            },
           ),
         ),
         Text(
-          "Note Calendar",
+          text,
           style: GoogleFonts.poppins(textStyle: const TextStyle(fontSize: 12)),
         )
       ]),
@@ -41,8 +55,44 @@ class SquareButton extends StatelessWidget {
 
 // Button Persegi Panjang
 class RectButton extends StatelessWidget {
+  const RectButton({
+    Key? key,
+    required this.text,
+    this.width = 150,
+    this.height = 55,
+    required this.bgColor,
+    required this.textColor,
+    required this.destination,
+  }) : super(key: key);
+
+  final String text;
+  final double width;
+  final double height;
+  final int bgColor;
+  final int textColor;
+  final Widget destination;
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SizedBox(
+      height: height,
+      width: width,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            primary: Color(bgColor),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10))),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Color(textColor),
+          ),
+        ),
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => destination));
+        },
+      ),
+    );
   }
 }
