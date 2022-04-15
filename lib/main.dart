@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 
+=======
+import 'package:mono_read/homepage/homePage.dart';
+import 'package:mono_read/notecalendar/add_note.dart';
+import 'package:mono_read/startingscreen/onboarding.dart';
+import 'package:mono_read/startingscreen/splash_screen.dart';
+>>>>>>> Stashed changes
 import 'package:mono_read/notecalendar/note_calendar.dart';
 
 
@@ -27,9 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-
-      home: NoteCalendar(),
-
+      home: AddNote(),
     );
   }
 }
