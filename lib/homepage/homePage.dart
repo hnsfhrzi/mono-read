@@ -26,9 +26,7 @@ class _homePageState extends State<homePage> {
           const floatAppBar(
             title: "Monoread",
             icon_1: Icon(Icons.menu_rounded, color: Colors.white, size: 25,),
-            routePg1: homePage(),
             icon_2: Icon(Icons.more_vert_rounded, color: Colors.white, size: 25,),
-            routePg2: homePage(),
           ),
           Positioned(
             left: 40, right: 40,
