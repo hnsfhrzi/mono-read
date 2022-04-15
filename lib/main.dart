@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:mono_read/homepage/homePage.dart';
 import 'package:mono_read/settings/setting.dart';
+import 'package:mono_read/notecalendar/add_note.dart';
+import 'package:mono_read/notecalendar/detail_note.dart';
+import 'package:mono_read/notecalendar/edit_note.dart';
 import 'package:mono_read/startingscreen/onboarding.dart';
 import 'package:mono_read/startingscreen/splash_screen.dart';
+
 import 'package:mono_read/notecalendar/note_calendar.dart';
 
 void main() {
