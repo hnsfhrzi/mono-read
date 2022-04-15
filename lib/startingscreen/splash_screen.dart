@@ -34,6 +34,16 @@ class _SplashScreenState extends State<SplashScreen>
         children: [
           AnimatedContainer(
             duration: const Duration(seconds: 3),
+            height: screenHeight,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Lottie.asset("assets/json/splash_screen.json",
+                controller: _noteController, onLoaded: (composition) {
+              _noteController
+                ..duration = composition.duration
+                ..forward();
+            }),
           )
         ],
       ),
