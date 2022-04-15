@@ -36,6 +36,7 @@ dependencies:
   intl: ^0.17.0
   introduction_screen: ^3.0.2
   lottie: ^1.2.2
+  drawer_swipe: ^0.0.4
   flutter_speed_dial: ^5.1.0
 
 dev_dependencies:

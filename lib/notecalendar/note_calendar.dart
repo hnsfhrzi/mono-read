@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mono_read/template/calendarCard.dart';
 
 import 'package:mono_read/template/floatAppBar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:mono_read/template/noteCard.dart';
 
 class NoteCalendar extends StatefulWidget {
@@ -27,19 +26,20 @@ class _NoteCalendarState extends State<NoteCalendar> {
                 width: double.infinity,
                 height: 150,
                 child: Stack(
-                  children: const [
+                  children:  [
                     floatAppBar(
                       title: "Note Calendar",
-                      icon_1: Icon(
+                      icon_1: const Icon(
                         Icons.arrow_back_rounded,
                         color: Colors.white,
                         size: 25,
                       ),
-                      icon_2: Icon(
+                      routePg1: () {},
+                      icon_2: const Icon(
                         Icons.more_vert_rounded,
                         color: Colors.white,
                         size: 25,
-                      ),
+                      ), routePg2: () {},
                     ),
                   ],
                 ),
@@ -86,7 +86,7 @@ class _NoteCalendarState extends State<NoteCalendar> {
                               mainAxisSpacing: 17,
                               crossAxisSpacing: 17,
                               childAspectRatio: 0.71,
-                              children: [
+                              children: const [
                                 NotesCard(),
                                 NotesCard(),
                                 NotesCard(),
@@ -124,7 +124,7 @@ class _NoteCalendarState extends State<NoteCalendar> {
                                     mainAxisSpacing: 29,
                                     crossAxisSpacing: 29,
                                     childAspectRatio: 0.91,
-                                    children: [
+                                    children: const [
                                       CalendarCard(),
                                       CalendarCard(),
                                       CalendarCard(),

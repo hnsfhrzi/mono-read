@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class floatAppBar extends StatelessWidget {
@@ -6,12 +5,16 @@ class floatAppBar extends StatelessWidget {
       {Key? key,
       required this.title,
       required this.icon_1,
-      required this.icon_2})
+      required this.icon_2,
+      required this.routePg1,
+      required this.routePg2})
       : super(key: key);
 
   final String title;
   final Widget icon_1;
   final Widget icon_2;
+  final routePg1;
+  final routePg2;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +28,20 @@ class floatAppBar extends StatelessWidget {
         children: [
           IconButton(
             icon: icon_1,
-            onPressed: () {},
+            onPressed: routePg1,
           ),
           Text(
             title,
-            style: TextStyle(color: Colors.white, letterSpacing: 3),
+
+            style: const TextStyle(
+                color: Colors.white,
+                letterSpacing: 3
+            ),
+
           ),
           IconButton(
             icon: icon_2,
-            onPressed: () {},
+            onPressed: routePg2,
           )
         ],
       ),
