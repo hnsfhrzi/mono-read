@@ -146,7 +146,7 @@ class _NoteCalendarState extends State<NoteCalendar> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: Color(0xFF3D405B),
+          backgroundColor: const Color(0xFF3D405B),
           child: const Icon(
             Icons.add_rounded,
             size: 30,
