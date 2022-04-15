@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class floatAppBar extends StatelessWidget {
-
   const floatAppBar(
       {Key? key,
       required this.title,
@@ -20,14 +19,10 @@ class floatAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 34, horizontal: 24),
+      margin: EdgeInsets.symmetric(vertical: 34, horizontal: 24),
       height: 86,
       decoration: BoxDecoration(
-
-          color: const Color(0XFF3D405B),
-          borderRadius: BorderRadius.circular(40)
-      ),
-
+          color: Color(0XFF3D405B), borderRadius: BorderRadius.circular(40)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

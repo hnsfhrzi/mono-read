@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class TitleFont extends StatelessWidget {
-  const TitleFont({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
+TextStyle appBarText = GoogleFonts.poppins(
+    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400));
