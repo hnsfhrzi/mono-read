@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mono_read/homepage/homePage.dart';
 import 'package:mono_read/startingscreen/onboarding.dart';
 import 'package:mono_read/startingscreen/splash_screen.dart';
+import 'package:mono_read/notecalendar/note_calendar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: homePage(),
+
+      home: NoteCalendar(),
+
     );
   }
 }
